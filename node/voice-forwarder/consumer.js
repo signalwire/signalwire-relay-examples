@@ -28,8 +28,15 @@ const consumer = new RelayConsumer({
         console.log('Connected to remote number!')
         call.on('answered', (call) => {
             console.log('Answered!')
-        }).on('ended', (call) => {
-            console.log('Call ended')
+        })
+
+        call.on('ended', (call) => {
+          console.log('Call ended')
+        })
+
+        call.on('connect.disconnected', async (call) => {
+          console.log('Call disconnected, hanging up')
+          await call.hangup()
         })
     }
   }
