@@ -16,9 +16,9 @@ To run this example you will need to first create a SignalWire account and then 
 
 Once your account, **inbound phone number**, and **verified outbound phone number** are set up. You need to edit the inbound phone number to forward calls to the context used by the Relay Consumer in this example, **voice-forwarder**.
 
-![](./imgs/edit-number.png)
+<img src="./imgs/edit-number.png" width="500" >
 
-![](./imgs/configure-context.png)
+<img src="./imgs/configure-context.png" width="600" >
 
 
 ## Running the consumer
