@@ -2,7 +2,9 @@
 
 <img src="./imgs/diagram.png" width="500" >
 
-This example will forward all inbound calls to a verified outbound number. Before connecting the outbound number, a custom text to speech message is played.  
+This example will forward all inbound calls to a verified outbound number. 
+
+Before connecting the outbound number, a custom text to speech message is played.  
 
 ## Prerequisites
 
