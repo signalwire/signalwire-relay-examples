@@ -22,6 +22,10 @@ Once your account, **inbound phone number**, and **verified outbound phone numbe
 
 <img src="./imgs/configure-context.png" width="600" >
 
+## API Credentials
+
+To run the example a SignalWire Project ID and API Token are required.
+[Follow these intructions to create a new API Token.](https://docs.signalwire.com/topics/relay/#relay-documentation-security)
 
 ## Running the consumer
 1. Clone this repository and navigate to this folder.
