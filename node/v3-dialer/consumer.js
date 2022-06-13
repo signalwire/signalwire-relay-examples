@@ -20,6 +20,7 @@ const taskClient = new Task.Client({
 taskClient.on('task.received', async (payload) => {
   console.log('Task Received', payload)
   await reportStatus('STARTED')
+  await reportStatus(`Calling ${payload.number}`)
   try {
     const call = await client.dialPhone({
       from: process.env.CALLER_ID,
@@ -27,6 +28,7 @@ taskClient.on('task.received', async (payload) => {
       timeout: 30,
     })
     const basePrompt = payload.message;
+    await reportStatus('PROMPTING')
     var result = await promptYesNo(call, basePrompt);
     if (result == 'invalid') {
       console.log('first input failed')
@@ -48,6 +50,7 @@ taskClient.on('task.received', async (payload) => {
     } else if (result == 'no')  {
       await reportStatus('NOT_CONFIRMED')
       await call.playTTS({ text: "I understand you would like to change your appointment. Let me transfer you."})
+      await reportStatus('TRANSFERING')
       await connectToAgent(call);
     }
     

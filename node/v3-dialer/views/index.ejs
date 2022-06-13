@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>SignalWire v3 Relay Dialer</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div>
@@ -14,6 +15,12 @@
       <br />
       <button type="button" onclick="sendReminder()">Send Reminder</button>
     </div>
+
+    <div id="call-status" style="margin: 20px;">
+      <i id="status-icon" class="fas fa-hourglass-start" style="font-size:36px;color:blue;"></i>
+      <p id="notify-text"></p>
+    </div>
+
     <script>
       async function sendReminder() {
         const data = {
@@ -35,6 +42,33 @@
 
       sse.addEventListener("message", ({data}) => {
         console.log(data);
+        document.getElementById("notify-text").innerHTML = data;
+
+        const iconID = 'status-icon';
+        
+        var text = data.replace('"', '').slice(0, -1);
+
+        switch(text) {
+          case "STARTED":
+            document.getElementById(iconID).className = "fas fa-phone-volume";
+            break;
+          case "PROMPTING":
+            document.getElementById(iconID).className = "fas fa-terminal";
+            break;
+          case "FAILED":
+            document.getElementById(iconID).className = "fas fa-phone-slash";
+            break;
+          case "CONFIRMED":
+            document.getElementById(iconID).className = "fas fa-check";
+            break;
+          case "NOT_CONFIRMED":
+            document.getElementById(iconID).className = "fas fa-xmark";
+            break;
+          case "TRANSFERING":
+            document.getElementById(iconID).className = "fas fa-headphones";
+            break;
+        }
+
       });
     </script>
   </body>
