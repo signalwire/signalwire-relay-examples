@@ -46,7 +46,10 @@ taskClient.on('task.received', async (payload) => {
       console.log('playing message')
       await reportStatus('CONFIRMED')
       await call.playTTS({ text: "Good! Your appointment is confirmed. Goodbye!"})
-      await call.hangup();
+      setTimeout(async () => {
+        await call.hangup();
+      }, 4000)
+      
     } else if (result == 'no')  {
       await reportStatus('NOT_CONFIRMED')
       await call.playTTS({ text: "I understand you would like to change your appointment. Let me transfer you."})

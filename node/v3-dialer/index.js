@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 let { Task } = require('@signalwire/realtime-api')
 
-const PORT = process.env.PORT || 3245
+const PORT = process.env.PORT || 8080
 const app = express();
 const http = require('http').createServer(app);
 
