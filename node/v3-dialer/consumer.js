@@ -53,8 +53,11 @@ taskClient.on('task.received', async (payload) => {
     } else if (result == 'no')  {
       await reportStatus('NOT_CONFIRMED')
       await call.playTTS({ text: "I understand you would like to change your appointment. Let me transfer you."})
-      await reportStatus('TRANSFERING')
-      await connectToAgent(call);
+      setTimeout(async () => {
+        await reportStatus('TRANSFERING')
+        await connectToAgent(call);
+      }, 5000)
+      
     }
     
   } catch (e) {
