@@ -37,9 +37,7 @@ Ensure you have NodeJS and NPM installed on your machine before running.
 
 1. Open a terminal and navigate to the root directory of this project.
 2. Run ```npm install``` to install all the node modules.
-3. Start the frontend and backend API by running the the command ```npm run start```
-4. Open another terminal window or tab in the same directory.
-5. Run the consumer using the command ```node consumer.js```
+3. Start the app by running ```npm run start```
 
 Both the frontend/backend and the consumer should now be running.
 
