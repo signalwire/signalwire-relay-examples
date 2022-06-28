@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "consumer": "node consumer.js"
+    "start": "node index.js & consumer.js",
+    "consumer": "node consumer.js",
+    "server": "node index.js"
   },
   "author": "",
   "license": "ISC",
