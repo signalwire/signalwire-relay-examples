@@ -6,7 +6,7 @@ It can easily run on a Raspberry Pi with a speaker plugged into the 3.5mm audio 
 
 ## Prerequisites
 
-To run this example you will need to first create a SignalWire account and then configure a SignalWire Space with an inbound phone number and verified outbound phone number to forward to. 
+To run this example you will need to first create a SignalWire account and then configure a SignalWire Space with an inbound phone number. 
 
 - [Create a SignalWire Space](https://developer.signalwire.com/apis/docs/signing-up-for-a-space)
 - [Buy a SignalWire Phone Number](https://developer.signalwire.com/apis/docs/buying-a-phone-number)
