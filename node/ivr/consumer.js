@@ -27,6 +27,11 @@ client.on("call.received", async (call) => {
 
   const playlist = new Voice.Playlist({ volume: 1.0 })
   .add(
+    Voice.Playlist.Audio({
+      url: "https://www.mediacollege.com/downloads/sound-effects/star-trek/tos/tos-computer-05.mp3"
+    })
+  )
+  .add(
     Voice.Playlist.TTS({
       text: "Thank you for calling the offices of Doctor Zhivago.",
     })

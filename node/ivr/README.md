@@ -8,7 +8,9 @@ There are three options. Pressing 1 will read out "location and hours" using tex
 
 Option 2 will allow them to make an appointment by iniating a speech to text prompt. When they finish speaking or press the pound key, the detected text of their speech is written to the console. This can be modified to send that detected text to a spreadsheet or wherever else it may be useful.
 
-Options 3 will connect the caller to a verified number that you specify. 
+Options 3 will read out the options again.
+
+Option 0 will connect the caller to a verified number that you specify. 
 
 
 ## Prerequisites
